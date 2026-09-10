@@ -14,13 +14,6 @@
     --mg-s: 12px; /*Margin small*/
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    font-family: var(--ff);
-    background-color: var(--mbc);
-}
-
 nav{
     position: fixed;
     top: 0;
