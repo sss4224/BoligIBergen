@@ -59,3 +59,18 @@ nav{
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     overflow: hidden;
 }
+
+#BergenBilde {
+    display: flex;
+    justify-content: right;
+   
+}
+
+
+#BergenBilde img{
+    width: 300px;
+    height: 300px;
+    border: solid black;
+    margin-top: 50%;
+    margin-right: 10%;
+}
