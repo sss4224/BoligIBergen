@@ -1,3 +1,19 @@
+
+:root{
+    --mbc: #FFF0D8; /*Main background-color*/
+    --ff: Arial, Helvetica, sans-serif; /*Font-family (Skrift type)*/
+    --mfs: 24px; /*Main font-size (Hoved skrift størrelse)*/
+    --hfs: 48px; /*Header font-size (Overskrift skrift størrelse)*/
+    --mbr: 10px; /*Main border-radius*/
+    --pd-b: 48px; /*Padding stor*/
+    --pd-m: 24px; /*Padding medium*/
+    --pd-s: 12px; /*Padding small*/
+    --mg-b: 48px; /*Margin stor*/
+    --mg-m: 24px; /*Margin medium*/
+    --mg-s: 12px; /*Margin small*/
+}
+
+
 body{
     margin: 0;
     padding: 0;
