@@ -1,15 +1,35 @@
 
-#BergenBilde {
-    display: flex;
-    justify-content: right;
-   
+
+.front-page{
+    height: 100vh;
+    width: 100%;
 }
 
+.hero-container{
+    height: 50vh;
+    width: 100%;
+}
 
-#BergenBilde img{
-    width: 60vh;
-    height: 60vh;
+.stats-container{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: right;  /*Endre til space-between når du legger til inputs*/
+    align-items: center;
+}
+
+.BergenBilde-container{
+    height: 35vh;
+    width: 35vh;
     border: solid black;
-    margin-top: 50vh;
-    margin-right: 10%;
+    border-radius: 10px;
+    margin-right: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-img{
+    transform: scale(.7);
 }
