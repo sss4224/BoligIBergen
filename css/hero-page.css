@@ -1,0 +1,15 @@
+
+#BergenBilde {
+    display: flex;
+    justify-content: right;
+   
+}
+
+
+#BergenBilde img{
+    width: 60vh;
+    height: 60vh;
+    border: solid black;
+    margin-top: 50vh;
+    margin-right: 10%;
+}
