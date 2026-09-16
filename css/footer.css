@@ -1,0 +1,21 @@
+.footer-kontakt-oss {
+    background-color: #034b93;
+    padding: 20px;
+    text-align: center;
+    color: white;
+
+ p {
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+    }
+
+ .spørsmål {
+        font-size: 15px;
+        color: black;
+        background-color: white;
+        padding: 15px;
+        border-radius: 12px;
+        margin: 100px;
+    }
+}
