@@ -1,0 +1,41 @@
+.hero {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 520px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("../html/images/bryggen.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image h1 {
+    margin: 0;
+    padding: 0; 
+
+    color: white;
+
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 1;
+
+    text-align: center;
+
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+}
