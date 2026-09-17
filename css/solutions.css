@@ -2,23 +2,30 @@
 .solutions {
     width: 100%;
     min-height: 100vh;
-    padding: 40px 0 80px;
+    padding: clamp(30px, 5vw, 80px) 20px;
+    box-sizing: border-box;
 }
 
 /* solutions header */
 #Boligen-Din-tittel {
     text-align: center;
-    font-size: 60px;
+
+    /*skal skalere med med skjerm størrelse*/
+    font-size: clamp(32px, 5vw, 60px);
     font-weight: 300;
 
-    width: 34%;
-    height: 120px;
+    width: min(90%, 1050px);
+    min-height: 100px;
+    height: auto;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin: 40px auto 40px auto;
+    margin: clamp(30px, 8vw, 120px) auto
+            clamp(30px, 5vw, 60px);
+
+    padding: 20px;
 
     background-color: rgba(237, 229, 229, 0.485);
     border: 1px solid rgba(100, 100, 100, 0.25);
@@ -30,16 +37,20 @@
     border-bottom: 6px solid rgb(203, 78, 201);
 }
 
+/*hoved løsning konteiner*/
 .Boligen-Din-container {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1050px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .kort-container {
     display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: clamp(20px, 3vw, 40px);
+    width: 100%;
     max-width: 1050px;
     margin: 0 auto;
 }
@@ -47,26 +58,33 @@
 .kort {
     background: #f6f3f3;
     border-radius: 12px;
-    padding: 30px 25px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.274);
+    padding: clamp(18px, 2vw, 20px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
     border: 1px solid #9f9999;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 220px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
 }
-
+.kort:hover {
+    transform: translateY(-1px);
+    background: #ffffff5c;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    
+}
 .kort h3 {
-    font-size: 26px;
+    font-size: clamp(18px, 2vw, 20px );
     color: #100d2d;
-    margin: 0 0 16px;
+    margin: 0 0 12px;
 }
 
 .kort p {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: clamp(12px, 1.2vw, 14px);
+    line-height: 1.5;
     color: #666;
-    margin: 0 0 18px;
+    margin: 0 0 20px;
 }
 
 .btn {
@@ -86,10 +104,233 @@
     transform: translateY(-1px);
 }
 
-.kort--interiør,
-.kort--uteomrade,
-.kort--kjokken,
-.kort--eksterior {
-    background: linear-gradient(180deg, #ffffff72 0%, #60277111 100%);
+
+/*kort varianter*/ 
+.kort--oppussing,
+.kort--DIYpussing,
+.kort--eksempel1,
+.kort--eksempel2 {
+    background: linear-gradient(180deg, #ffffff72 0%, #5c565d16 100%);
 }
 
+
+
+
+
+/*oppussing*/
+.oppussing {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px 80px;
+    box-sizing: border-box;
+}
+.oppussing-header {
+    max-width: 1050px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.oppussing-header h1 {
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-top: 150px;
+}
+.oppussing-header p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.bedrift-logo {
+    height: 130px;
+    background: white;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+.andre-bedrifter {
+    max-width: 1050px;
+    margin: 60px auto 0;
+}
+
+.andre-bedrifts-innhold {
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #f6f3f3,
+        #eee8f5
+    );
+
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.andre-bedrifts-innhold h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+
+.andre-bedrifts-innhold p {
+    max-width: 600px;
+    margin: 0 0 20px;
+
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+}
+
+
+/* DIYpussing */
+.DIYpussing {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px 80px;
+    box-sizing: border-box;
+}
+
+
+/* DIY header */
+.diy-header {
+    max-width: 1050px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.diy-header h1 {
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 300;
+    margin: 0 0 15px;
+}
+
+.diy-header p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+}
+
+
+/* Product placeholder */
+.produkt-bilde {
+    height: 130px;
+    background: white;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Product content */
+.produkt-innhold {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.produkt-innhold h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #100d2d;
+    margin: 0 0 8px;
+}
+
+.produkt-type {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #777;
+    margin: 0 0 12px;
+}
+
+.produkt-innhold > p:not(.produkt-type) {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666;
+    margin: 0 0 20px;
+    flex-grow: 1;
+}
+
+.produkt-innhold .btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+
+/* Flere produkter */
+.flere-produkter {
+    max-width: 1050px;
+    margin: 60px auto 0;
+}
+
+.flere-produkter-innhold {
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #f6f3f3,
+        #eee8f5
+    );
+
+    border: 1px solid #ddd;
+    border-radius: 12px;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+
+    box-sizing: border-box;
+}
+
+.flere-produkter-innhold h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+
+.flere-produkter-innhold p {
+    max-width: 600px;
+    margin: 0 0 20px;
+
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+}
