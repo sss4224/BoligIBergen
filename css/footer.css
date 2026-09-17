@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
 
-    background-color: #034b93;
+    background-color: #01305f;
     color: white;
 }
 
@@ -25,7 +25,7 @@
     margin: 0;
     padding: 25px;
     height: 50vh;
-max-width: 300px;
+    max-width: 300px;
     background-color: white;
     color: black;
     border-radius: 12px;
@@ -46,8 +46,7 @@ max-width: 300px;
     font-size: 16px;
 }
 
-.kontakt-skjema input,
-.kontakt-skjema textarea {
+.kontakt-skjema input {
     box-sizing: border-box;
     width: 100%;
     padding: 15px;
@@ -70,7 +69,6 @@ max-width: 300px;
     padding: 12px 25px;
 
     background-color: white;
-    color: #034b93;
     border: none;
     border-radius: 20px;
 
