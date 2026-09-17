@@ -86,22 +86,27 @@
                 </div>
         </section>
         <section class="faq">
-            <h2 id="faq-title">FAQ</h2>
+              <h2 id="faq-title">FAQ</h2>
             <div id="faq-container">
                 <div id="faq-questions">
-                    <button type="button" onclick="showAnswer('answer1')">Hva er Bolig i Bergen?</button>
-                    <button type="button" onclick="showAnswer('answer2')">Hvordan kan jeg finne bolig i Bergen?</button>
-                    <button type="button" onclick="showAnswer('answer3')">Hva er de vanligste boligtypene i Bergen?</button> 
-                    <button type="button" onclick="showAnswer('answer4')">Hvordan fungerer boligmarkedet i Bergen?</button>
+                    <button type="button" onclick="showAnswer('answer1', this)">Hva er Bolig i Bergen?</button>
+                    <button type="button" onclick="showAnswer('answer2', this)">Hvordan kan jeg finne bolig i Bergen?</button>
+                    <button type="button" onclick="showAnswer('answer3', this)">Hva er de vanligste boligtypene i Bergen?</button> 
+                    <button type="button" onclick="showAnswer('answer4', this)">Hvordan fungerer boligmarkedet i Bergen?</button>
                 </div>
+
                 <div id="faq-answers">
+                    <div id="default-answer">Velg et spørsmål for å se svaret.</div>
                     <div id="answer1" class="faq-answer" style="display: none;">Bolig i Bergen er en tjeneste som hjelper deg med å finne bolig i Bergen.</div>
                     <div id="answer2" class="faq-answer" style="display: none;">Du kan finne bolig i Bergen ved å bruke boligportaler, kontakte eiendomsmegler, eller søke på nettet.</div>
                     <div id="answer3" class="faq-answer" style="display: none;">De vanligste boligtypene i Bergen er leiligheter, rekkehus og villaer.</div>
                     <div id="answer4" class="faq-answer" style="display: none;">Boligmarkedet i Bergen fungerer etter samme prinsipper som andre norske boligmarkeder, med tilbud og etterspørsel som påvirker prisene.</div>
                 </div>            
             </div>
+
         </section>
+
+
         <section class="footer-kontakt-oss" id="kontakt-oss-id">
             <footer class="footer-kontakt-oss">
                 <div class="kontakt-container">
