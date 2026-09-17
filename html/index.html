@@ -14,13 +14,22 @@
 <body>
     <main>
         <section class="nav-section">
+            <input type="checkbox" name="close-input" id="close-input">
+            <div class="open-container">
+                <label for="close-input"><i class="fa-solid fa-bars fa-lg"></i></label>
+            </div>
             <nav>
-                <div class="logo-container">
-                    <a href="index.html" class="nav-btn nav-logo"></a>
+                <div class="logo-close-container">
+                    <div class="logo-container">
+                        <a href="index.html" class="nav-btn nav-logo"></a>
+                    </div>
+                    <div class="close-container">
+                        <label for="close-input"><i class="fa-solid fa-x"></i></label>
+                    </div>
                 </div>
                 <div class="btn-container">
                     <a href="index.html" class="nav-btn active">Hjem</a>
-                    <a href="#" class="nav-btn">Kontakt oss</a>
+                    <a href="index.html#kontakt-oss-id" class="nav-btn">Kontakt oss</a>
                     <a href="om-oss.html" class="nav-btn">Om oss</a>
                     <a href="#" class="nav-btn">Prosjekt</a>
                 </div>
@@ -31,18 +40,17 @@
             <div class="hero-image">
                 <h1>Bolig i Bergen</h1>
             </div>
+
             <div class="hero-details">
                 <div class="input-stat-container">
                     <input type="text" id="input-Område" placeholder="Område">
-                    <input type="text" id="input-Bolig-priser-om området" placeholder="Bolig priser om området">
-                <div>
-
+                    <input type="text" id="input-Bolig-priser-om-området" placeholder="Bolig priser om området">
                 </div>
-            
-                
-                 
-            
 
+                <div class="hero-map">
+                    <img src="../images/BergenHalvoyBilde.png" alt="Kart over Bergen">
+                </div>
+            </div>
         </section>
         <section class="solutions">
             <h2 id="Boligen-Din-tittel">Boligen Din</h2>
@@ -75,7 +83,6 @@
                         <p>Maling egnet for bergen by og mye mer</p>
                         <p> <a class="btn" href="./pgs-solutions/Eksterior.html">Gå til eksteriør</a></p>
                      </article>
-
                 </div>
         </section>
         <section class="faq">
@@ -87,7 +94,6 @@
                     <button type="button" onclick="showAnswer('answer3')">Hva er de vanligste boligtypene i Bergen?</button> 
                     <button type="button" onclick="showAnswer('answer4')">Hvordan fungerer boligmarkedet i Bergen?</button>
                 </div>
-
                 <div id="faq-answers">
                     <div id="answer1" class="faq-answer" style="display: none;">Bolig i Bergen er en tjeneste som hjelper deg med å finne bolig i Bergen.</div>
                     <div id="answer2" class="faq-answer" style="display: none;">Du kan finne bolig i Bergen ved å bruke boligportaler, kontakte eiendomsmegler, eller søke på nettet.</div>
@@ -95,7 +101,6 @@
                     <div id="answer4" class="faq-answer" style="display: none;">Boligmarkedet i Bergen fungerer etter samme prinsipper som andre norske boligmarkeder, med tilbud og etterspørsel som påvirker prisene.</div>
                 </div>            
             </div>
-
             <script>
                function showAnswer(answer) {
                     var answers = document.getElementsByClassName("faq-answer");
@@ -104,68 +109,45 @@
                     }
                     document.getElementById(answer).style.display = "block";
                 }
-
-           
             </script>
-
         </section>
-        
-    
+        <section class="footer-kontakt-oss" id="kontakt-oss-id">
+            <footer class="footer-kontakt-oss">
+                <div class="kontakt-container">
+                    <div class="spørsmål">
+                        <h1>Spørsmål om boligprisene?</h1>
+                        <h2>Send oss en melding</h2>
+                    </div>
+                    <form class="kontakt-skjema">
+                        <label for="navn">Navn</label>
+                        <input placeholder="Skriv inn navn">
+                    
+                        <label for="email">E-post</label>
+                        <input placeholder="Skriv inn e-post">
+                    
+                        <label for="melding">Spørsmål</label>
+                        <inputplaceholder="Skriv inn spørsmål">
+                    
+                        <button type="submit">Send melding</button>
+                    </form>
+                </div>
+
+                <div class="footer-bunn">
+                    <div class="sosiale-medier">
+                        <a href="https://instagram.com">@BoligIBergen</a>
+                        <a href="https://github.com">Sjekk ut vår GitHub</a>
+                        <a href="https://linkedin.com">Sjekk ut vår LinkedIn</a>
+                    </div>
+                
+                    <p class="copyright">
+                        &copy; 2026 Bolig I Bergen A/S. All rights reserved.
+                    </p>
+                </div>
+            </footer>
+        </section>
     </main>
-        </section>
-           
-        <section class="footer-kontakt-oss">
-
-       
-
-        </main>
-
-<footer class="footer-kontakt-oss">
-
-
-    <div class="kontakt-container">
-        <div class="spørsmål">
-            <h1>Spørsmål om boligprisene?</h1>
-            <h2>Send oss en melding</h2>
-        </div>
-
-    <form class="kontakt-skjema">
-
-                <label for="navn">Navn</label>
-                         <input
-                         placeholder="Skriv inn navn"
-                        >
-    
-                <label for="email">E-post</label>
-                         <input
-                         placeholder="Skriv inn e-post"
-                        >
-
-                <label for="melding">Spørsmål</label>
-                         <input
-                         placeholder="Skriv inn spørsmål"
-                        >
-
-                <button type="submit">Send melding</button>
-
-    </form>
-    </div>
-
-    <div class="footer-bunn">
-        <div class="sosiale-medier">
-            <a href="https://instagram.com">@BoligIBergen</a>
-            <a href="https://github.com">Sjekk ut vår GitHub</a>
-            <a href="https://linkedin.com">Sjekk ut vår LinkedIn</a>
-        </div>
-
-        <p class="copyright">
-            &copy; 2026 Bolig I Bergen A/S. All rights reserved.
-        </p>
-    </div>
-</footer>
-
-</section>
 
     <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/3887c28c13.js" crossorigin="anonymous"></script>
 </body>
 </html>

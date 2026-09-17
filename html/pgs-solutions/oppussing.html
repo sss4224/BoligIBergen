@@ -9,17 +9,28 @@
 </head>
 <body>
      <main>
-        <nav>
-            <div class="logo-container">
-                <a href="index.html" class="nav-btn nav-logo"></a>
+        <input type="checkbox" name="close-input" id="close-input">
+            <div class="open-container">
+                <label for="close-input"><i class="fa-solid fa-bars fa-lg"></i></label>
             </div>
-            <div class="btn-container">
-                <a href="index.html" class="nav-btn active">Hjem</a>
-                <a href="#" class="nav-btn">Kontakt oss</a>
-                <a href="om-oss.html" class="nav-btn">Om oss</a>
-                <a href="#" class="nav-btn">Prosjekt</a>
-            </div>
-        </nav>
+            <nav>
+                <div class="logo-close-container">
+                    <div class="logo-container">
+                        <a href="index.html" class="nav-btn nav-logo"></a>
+                    </div>
+                    <div class="close-container">
+                        <label for="close-input"><i class="fa-solid fa-x"></i></label>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <a href="index.html" class="nav-btn active">Hjem</a>
+                    <a href="#" class="nav-btn">Kontakt oss</a>
+                    <a href="om-oss.html" class="nav-btn">Om oss</a>
+                    <a href="#" class="nav-btn">Prosjekt</a>
+                </div>
+            </nav>
+            <div class="shadow-layer"></div>
     </main>
+    <script src="https://kit.fontawesome.com/3887c28c13.js" crossorigin="anonymous"></script>
 </body>
 </html>
