@@ -28,8 +28,8 @@
                     </div>
                 </div>
                 <div class="btn-container">
-                    <a href="index.html" class="nav-btn active">Hjem</a>
-                    <a href="index.html#kontakt-oss-id" class="nav-btn">Kontakt oss</a>
+                    <a href="index.html" class="nav-btn nav-btn-home active">Hjem</a>
+                    <a href="index.html#kontakt-oss-id" class="nav-btn nav-btn-kontakt-oss">Kontakt oss</a>
                     <a href="om-oss.html" class="nav-btn">Om oss</a>
                     <a href="#" class="nav-btn">Prosjekt</a>
                 </div>
@@ -101,15 +101,6 @@
                     <div id="answer4" class="faq-answer" style="display: none;">Boligmarkedet i Bergen fungerer etter samme prinsipper som andre norske boligmarkeder, med tilbud og etterspørsel som påvirker prisene.</div>
                 </div>            
             </div>
-            <script>
-               function showAnswer(answer) {
-                    var answers = document.getElementsByClassName("faq-answer");
-                    for (var i = 0; i < answers.length; i++) {
-                        answers[i].style.display = "none";
-                    }
-                    document.getElementById(answer).style.display = "block";
-                }
-            </script>
         </section>
         <section class="footer-kontakt-oss" id="kontakt-oss-id">
             <footer class="footer-kontakt-oss">
@@ -147,7 +138,7 @@
         </section>
     </main>
 
-    <script src="main.js"></script>
+    <script src="../js/main.js"></script>
     <script src="https://kit.fontawesome.com/3887c28c13.js" crossorigin="anonymous"></script>
 </body>
 </html>
