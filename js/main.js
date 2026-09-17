@@ -1,6 +1,7 @@
 
 
 checkForSection('kontakt-oss-id');
+stopAnimationOnResize();
 
 function checkForSection(section){
 
@@ -59,4 +60,17 @@ function showAnswer(answer, button) {
                     
                 }
 
-           
+
+function stopAnimationOnResize(){
+    let resizeTimer;
+    
+    window.addEventListener('resize', () => {
+        document.querySelector('nav').classList.add('resize-animation-stopper');
+    
+        clearTimeout(resizeTimer);
+    
+        resizeTimer = setTimeout(() => {
+            document.querySelector('nav').classList.remove('resize-animation-stopper');
+        }, 400);
+    })
+}
