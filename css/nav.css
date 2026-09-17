@@ -36,11 +36,11 @@ nav{
     background-color: #367CFF;
 }
 
-.logo-container, .btn-container{
+.logo-container, .btn-container, .close-container, .open-container{
     backdrop-filter: blur(3px);
     margin: var(--mg-m) 100px;
     border-radius: var(--mbr);
-    height: 100%;
+    height: fit-content;
     display: flex;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     overflow: hidden;
@@ -53,16 +53,34 @@ nav{
     background-repeat: no-repeat;
 }
 
+.close-container,.open-container, #close-input{
+    display: none;
+}
+
+#close-input:checked ~ nav{
+    transform: translateX(0);
+}
 
 @media screen and (max-width: 900px) {
+    
+    #close-input:checked ~ nav{
+        transform: translateX(-105%);
+    }
+    
+    #close-input:checked ~ .shadow-layer{
+        display: none;
+    }
+    
     nav{
         height: 100vh;
-        width: 25%;
+        width: 25vw;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         align-items: center;
         padding: 0 24px;
         background-color: var(--mbc);
+        transition-duration: 150ms;
+        transition-property: transform;
     }
 
     nav, .btn-container, .logo-container{
@@ -76,6 +94,11 @@ nav{
     .nav-btn:not(.logo-container > .nav-btn){
         width: 100%;
     }
+    .btn-container{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
     .logo-container{
         width: fit-content;
         margin-top: 0;
@@ -97,5 +120,45 @@ nav{
         left: 0;
         background-color: rgba(0, 0, 0, .5);
         z-index: 99;
+    }
+
+    .logo-close-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        width: 100%;
+    }
+    .logo-close-container > *{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-container{
+        margin: 0;
+        width: 50%;
+    }
+
+    .close-container{
+        display: flex;
+        height: 50px;
+        width: 50px;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .open-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: fixed;
+        top: 50px;
+        left: 0px;
+
+        height: 50px;
+        width: 100px;
+        z-index: 100;
     }
 }
