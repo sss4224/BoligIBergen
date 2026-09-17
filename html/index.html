@@ -37,25 +37,66 @@
         </section>
         <section class="løsning"></section>
         <section class="faq"></section>
-      
-        <section class="footer-kontakt-oss">
-
-            <footer> 
-
-                <div class="spørsmål">
-                <h1>Spørsmål om boligprisene?</h1>
-                <h1>Send oss melding</h1>
-                </div>
-        <p><a href="instagram">@BoligIBergen</a>
-        <a href="github">Sjekk ut vår GitHub</a>
-        <a href="linkedin">Sjekk ut vår LinkedIn</a></p>
-        &copy;  2026 Bolig I Bergen A/S. All rights reserved.
-        </footer>
-
-        </section>
-
-
-
+    
     </main>
+
+
+       
+
+<footer class="footer-kontakt-oss">
+
+
+    <div class="kontakt-container">
+    <div class="spørsmål">
+        <h1>Spørsmål om boligprisene?</h1>
+        <h2>Send oss en melding</h2>
+    </div>
+
+    <form class="kontakt-skjema">
+        <label for="navn">Navn</label>
+        <input
+            type="text"
+            id="navn"
+            name="navn"
+            placeholder="Skriv inn navn"
+            required
+    >
+    
+        <label for="email">E-post</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Skriv inn e-post"
+            required
+        >
+
+        <label for="melding">Spørsmål</label>
+        <textarea
+            id="melding"
+            name="melding"
+            placeholder="Skriv inn spørsmål"
+            rows="5"
+            required
+        ></textarea>
+
+        <button type="submit">Send melding</button>
+    </form>
+    </div>
+
+    <div class="footer-bunn">
+        <div class="sosiale-medier">
+            <a href="https://instagram.com">@BoligIBergen</a>
+            <a href="https://github.com">Sjekk ut vår GitHub</a>
+            <a href="https://linkedin.com">Sjekk ut vår LinkedIn</a>
+        </div>
+
+        <p class="copyright">
+            &copy; 2026 Bolig I Bergen A/S. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+
 </body>
 </html>
