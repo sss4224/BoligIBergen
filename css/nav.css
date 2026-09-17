@@ -48,8 +48,9 @@ nav{
 
 .nav-logo{
     background-image: url("../images/logo.png");
-    background-position: center;
-    background-size: cover;
+    background-position: center -30%;
+    background-size: 50%;
+    background-repeat: no-repeat;
 }
 
 
