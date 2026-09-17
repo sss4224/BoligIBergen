@@ -1,9 +1,4 @@
-.hero {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    
-}
+
 
 .hero-image {
     width: 100%;
@@ -11,8 +6,8 @@
 
     background-image:
         linear-gradient(
-            rgba(0, 0, 0, 0.35),
-            rgba(0, 0, 0, 0.35)
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0)
         ),
         url("../images/bryggen.webp");
 
@@ -37,7 +32,7 @@
 
     text-align: center;
 
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.625);
 
 }
 
@@ -49,11 +44,11 @@
     height: 50vh;
     box-sizing: border-box;
 
-    background-color: #fff5e9;
+    background-color: #0a080572;
 
     padding: 40px 7%;
 
-    display: flex;
+    display: flex;s
     align-items: center;
 }
 
