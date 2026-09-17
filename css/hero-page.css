@@ -40,3 +40,60 @@
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 
 }
+
+
+
+
+.hero-details {
+    width: 100%;
+    height: 50vh;
+    box-sizing: border-box;
+
+    background-color: #fff5e9;
+
+    padding: 40px 7%;
+
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.input-stat-container {
+    width: 390px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+
+
+
+.input-stat-container input {
+    width: 390px;
+    height: 78px;
+
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0 15px;
+
+    background-color: white;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    font-size: 20px;
+    font-weight: bold;
+    color: #777777;
+}
+
+
+
+
+.input-stat-container input::placeholder {
+    color: #777777;
+    opacity: 1;
+}
