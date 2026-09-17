@@ -34,13 +34,31 @@ function checkForSection(section){
 }
 
 
-function showAnswer(answer) {
-    var answers = document.getElementsByClassName("faq-answer");
-    for (var i = 0; i < answers.length; i++) {
-        answers[i].style.display = "none";
-    }
-    document.getElementById(answer).style.display = "block";
-}
+function showAnswer(answer, button) {
+                     if (button.classList.contains("active")) {
+
+                        document.getElementById(answer).style.display = "none";
+                        document.getElementById("default-answer").style.display = "block";
+                        button.classList.remove("active");
+                        return; }
+
+                    var answers = document.getElementsByClassName("faq-answer");
+                    for (var i = 0; i < answers.length; i++) {
+                        answers[i].style.display = "none";
+                    }
+
+                    document.getElementById("default-answer").style.display = "none";
+                    document.getElementById(answer).style.display = "block";
+
+                      var buttons = document.querySelectorAll("#faq-questions button");
+
+                    for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].classList.remove("active");
+                     }
+
+                    button.classList.add("active");
+                    
+                }
 
 
 function stopAnimationOnResize(){
