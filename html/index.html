@@ -34,8 +34,72 @@
 
             
         </section>
-        <section class="løsning"></section>
-        <section class="faq"></section>
+        <section class="solutions">
+            <h2 id="Boligen-Din-tittel">Boligen Din</h2>
+            <div class="Boligen-Din-container">
+                 <div class="kort-container">
+                    <!-- Interiør/Oppussing -->
+                    <article class="kort fremhevd kort--interiør"> 
+                        <h3>Interiør</h3>
+                        <p>Oppussing av interiøret i boligen din for en følelse av en frisk og ny bolig </p>
+                        <p> <a class="btn" href="./pgs-solutions/Interioer.html">Gå til interiør</a></p>
+                    </article>
+
+                    <!-- Uteområde -->
+                    <article class="kort fremhevd kort--uteomrade">
+                        <h3>Uteområde</h3>
+                        <p>En god plan for hagen gir den beste hagen</p>
+                        <p> <a class="btn" href="./pgs-solutions/Uteomrade.html">Gå til uteområde</a></p>
+                    </article>
+
+                    <!-- Kjøkken-->
+                     <article class="kort fremhevd kort--kjokken">
+                        <h3>Kjøkken</h3>
+                        <p>En ordentlig Bergensk inspirert kjøkkenløsning</p>
+                        <p> <a class="btn" href="./pgs-solutions/Kjokken.html">Gå til kjøkken</a></p>
+                     </article>
+
+                     <!--Eksteriør/Oppussing f.eks.-->
+                       <article class="kort fremhevd kort--eksterior">
+                        <h3>Eksteriør</h3>
+                        <p>Maling egnet for bergen by og mye mer</p>
+                        <p> <a class="btn" href="./pgs-solutions/Eksterior.html">Gå til eksteriør</a></p>
+                     </article>
+
+                </div>
+        </section>
+        <section class="faq">
+            <h2 id="faq-title">FAQ</h2>
+            <div id="faq-container">
+                <div id="faq-questions">
+                    <button type="button" onclick="showAnswer('answer1')">Hva er Bolig i Bergen?</button>
+                    <button type="button" onclick="showAnswer('answer2')">Hvordan kan jeg finne bolig i Bergen?</button>
+                    <button type="button" onclick="showAnswer('answer3')">Hva er de vanligste boligtypene i Bergen?</button> 
+                    <button type="button" onclick="showAnswer('answer4')">Hvordan fungerer boligmarkedet i Bergen?</button>
+                </div>
+
+                <div id="faq-answers">
+                    <div id="answer1" class="faq-answer" style="display: none;">Bolig i Bergen er en tjeneste som hjelper deg med å finne bolig i Bergen.</div>
+                    <div id="answer2" class="faq-answer" style="display: none;">Du kan finne bolig i Bergen ved å bruke boligportaler, kontakte eiendomsmegler, eller søke på nettet.</div>
+                    <div id="answer3" class="faq-answer" style="display: none;">De vanligste boligtypene i Bergen er leiligheter, rekkehus og villaer.</div>
+                    <div id="answer4" class="faq-answer" style="display: none;">Boligmarkedet i Bergen fungerer etter samme prinsipper som andre norske boligmarkeder, med tilbud og etterspørsel som påvirker prisene.</div>
+                </div>            
+            </div>
+
+            <script>
+               function showAnswer(answer) {
+                    var answers = document.getElementsByClassName("faq-answer");
+                    for (var i = 0; i < answers.length; i++) {
+                        answers[i].style.display = "none";
+                    }
+                    document.getElementById(answer).style.display = "block";
+                }
+
+           
+            </script>
+
+        </section>
+        </section>
            
         <section class="footer-kontakt-oss">
 
