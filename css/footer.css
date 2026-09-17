@@ -1,30 +1,119 @@
 .footer-kontakt-oss {
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+
     background-color: #034b93;
-    padding: 20px;
-    text-align: center;
-
- p {
-        display: flex;
-        justify-content: space-between;
-        font-size: 20px;
-        text-align: center;
-    }
-
- .spørsmål {
-        font-size: 15px;
-        color: black;
-        background-color: white;
-        padding: 15px;
-        border-radius: 12px;
-        margin: 100px;
-    }
-a:link {
     color: white;
 }
-a:visited {
-    color: white;
+
+.kontakt-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    width: 100%;
+    margin: 40px 0;
 }
-a {
+
+.spørsmål {
+    flex: 1;
+    margin: 0;
+    padding: 25px;
+    height: 50vh;
+max-width: 300px;
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.kontakt-skjema {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+
+}
+
+.kontakt-skjema label {
+    color: white;
+    font-size: 16px;
+}
+
+.kontakt-skjema input,
+.kontakt-skjema textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.kontakt-skjema textarea {
+    resize: vertical;
+}
+
+.kontakt-skjema button {
+    align-self: flex-end;
+    padding: 12px 25px;
+
+    background-color: white;
+    color: #034b93;
+    border: none;
+    border-radius: 20px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.kontakt-skjema button:hover {
+    background-color: #e5e5e5;
+}
+
+.spørsmål h1 {
+    margin: 10px 0;
+}
+
+.footer-bunn {
+    width: 100%;
+    margin-top: auto;
+}
+
+.sosiale-medier {
+    position: static;
+    inset: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    font-size: 20px;
+}
+
+.sosiale-medier a {
+    color: white;
     text-decoration: none;
 }
+
+.sosiale-medier a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin: 25px 0 0;
+    color: white;
+    text-align: center;
 }
