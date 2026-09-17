@@ -2,12 +2,12 @@
     background-color: #034b93;
     padding: 20px;
     text-align: center;
-    color: white;
 
  p {
         display: flex;
         justify-content: space-between;
         font-size: 20px;
+        text-align: center;
     }
 
  .spørsmål {
@@ -18,4 +18,13 @@
         border-radius: 12px;
         margin: 100px;
     }
+a:link {
+    color: white;
+}
+a:visited {
+    color: white;
+}
+a {
+    text-decoration: none;
+}
 }
