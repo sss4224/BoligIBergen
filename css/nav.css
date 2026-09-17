@@ -1,19 +1,4 @@
 
-
-:root{
-    --mbc: #FFF0D8; /*Main background-color*/
-    --ff: Arial, Helvetica, sans-serif; /*Font-family (Skrift type)*/
-    --mfs: 24px; /*Main font-size (Hoved skrift størrelse)*/
-    --hfs: 48px; /*Header font-size (Overskrift skrift størrelse)*/
-    --mbr: 10px; /*Main border-radius*/
-    --pd-b: 48px; /*Padding stor*/
-    --pd-m: 24px; /*Padding medium*/
-    --pd-s: 12px; /*Padding small*/
-    --mg-b: 48px; /*Margin stor*/
-    --mg-m: 24px; /*Margin medium*/
-    --mg-s: 12px; /*Margin small*/
-}
-
 nav{
     position: fixed;
     top: 0;
@@ -22,6 +7,7 @@ nav{
     display: flex;
     justify-content: space-between;
     font-size: var(--mfs);
+    z-index: 999;
 }
 
 .nav-btn{
@@ -58,4 +44,51 @@ nav{
     display: flex;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     overflow: hidden;
+}
+
+
+@media screen and (max-width: 900px) {
+    nav{
+        height: 100vh;
+        width: 25%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0 24px;
+        background-color: var(--mbc);
+    }
+
+    nav, .btn-container, .logo-container{
+        flex-direction: column;
+    }
+
+    .btn-container, .logo-container{
+        height: fit-content;
+        width: 100%;
+    }
+    .nav-btn:not(.logo-container > .nav-btn){
+        width: 100%;
+    }
+    .logo-container{
+        width: fit-content;
+        margin-top: 0;
+    }
+
+    .nav-btn.active::after{
+        top: 0;
+        right: 0;
+        left: auto;
+        height: 100%;
+        width: 5px;
+    }
+    
+    .shadow-layer{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .5);
+        z-index: 99;
+    }
 }
