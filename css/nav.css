@@ -46,6 +46,13 @@ nav{
     overflow: hidden;
 }
 
+.nav-logo{
+    background-image: url("../images/logo.png");
+    background-position: center -30%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
 
 @media screen and (max-width: 900px) {
     nav{
