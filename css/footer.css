@@ -10,21 +10,10 @@
     color: white;
 }
 
-.kontakt-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-
-    width: 100%;
-    margin: 40px 0;
-}
-
 .spørsmål {
     flex: 1;
-    margin: 0;
     padding: 25px;
-    height: 50vh;
+    height: 250px;
     max-width: 300px;
     background-color: white;
     color: black;
@@ -32,53 +21,43 @@
     text-align: left;
 }
 
+.kontakt-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+   margin-top: 20vh;
+}
+
 .kontakt-skjema {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 300px;
+    max-width: 400px;
+    height: 300px;
 
-}
-
-.kontakt-skjema label {
-    color: white;
-    font-size: 16px;
 }
 
 .kontakt-skjema input {
-    box-sizing: border-box;
-    width: 100%;
+    
+    width: 300px;
     padding: 15px;
-
-    background-color: white;
-    color: black;
     border: none;
     border-radius: 20px;
-
-    font-family: inherit;
     font-size: 16px;
 }
 
 .kontakt-skjema textarea {
-    resize: vertical;
-}
-
-.kontakt-skjema button {
-    align-self: flex-end;
-    padding: 12px 25px;
-
-    background-color: white;
+    
+    width: 300px;
+    padding: 15px;
     border: none;
     border-radius: 20px;
-
     font-size: 16px;
-    cursor: pointer;
+    resize: none;
+    height: 250px;
 }
 
-.kontakt-skjema button:hover {
-    background-color: #e5e5e5;
-}
 
 .spørsmål h1 {
     margin: 10px 0;
@@ -90,15 +69,13 @@
 }
 
 .sosiale-medier {
-    position: static;
-    inset: auto;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     width: 100%;
-    font-size: 20px;
+    font-size: 23px;
 }
 
 .sosiale-medier a {
@@ -114,8 +91,15 @@
     text-decoration: underline;
 }
 
-.copyright {
-    margin: 25px 0 0;
+.bunntekst {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 0;
     color: white;
-    text-align: center;
 }
+
+.bunntekst p {
+    margin: 0;
+    padding: 0 10px;
+}
+
