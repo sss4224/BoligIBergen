@@ -69,6 +69,18 @@
     flex-direction: row;
 }
 
+.tabell-data, td, th{
+    border: 2px solid black;
+}
+
+.tabell-data{
+    background-color: white;
+    border-collapse: collapse;
+}
+
+.th, td{
+    padding: 10px;
+}
 
 
 
