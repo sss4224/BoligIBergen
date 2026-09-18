@@ -235,7 +235,7 @@
 }
 
 
-/* Product placeholder */
+/* Produkt plassholder til bilde */
 .produkt-bilde {
     height: 130px;
     background: white;
@@ -253,7 +253,7 @@
 }
 
 
-/* Product content */
+/* Produkt innhold */
 .produkt-innhold {
     display: flex;
     flex-direction: column;
@@ -333,4 +333,44 @@
     font-size: 14px;
     line-height: 1.5;
     color: #666;
+}
+
+/* lister på side til oppussing og DIY */ 
+.produkt-liste {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 40px;
+
+    width: 100%;
+    max-width: 600px;
+}
+
+.produkt-liste li {
+    text-align: center;
+}
+
+.produkt-liste a {
+    display: block;
+
+    padding: 10px 15px;
+
+    color: #100d2d;
+    text-decoration: none;
+
+    background: #f6f3f3a7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.produkt-liste a:hover {
+    background: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
