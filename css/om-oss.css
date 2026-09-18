@@ -1,52 +1,97 @@
-
-       .team-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            max-width: 1050px;
-            margin: 200px auto 40px auto;
-        }
-        .card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e0e0e0;
-            display: flex;
-            flex-direction: column;
-        }
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    margin-top: 30vh;
+}
 
 
-        .card-image {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+}
 
 
-        .card-role {
-            font-size: 11px;
-            text-transform: uppercase;
-            color: #888;
-            letter-spacing: 0.5px;
-            margin-bottom: 2px;
-        }
+.card-image {
+    width: auto;
+    height: 300px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-size: cover;       
+    background-position: center;   
+    background-repeat: no-repeat;  
+}
+
+.team-grid .card:nth-child(1) .card-image {
+    background-image: url('../images/profilbilde/pfpHerman.jpg');
+}
+
+.team-grid .card:nth-child(2) .card-image {
+    background-image: url('../images/profilbilde/pfpSebastian.jpg');
+}
+
+.team-grid .card:nth-child(3) .card-image {
+    background-image: url('../images/profilbilde/pfpAteeq.JPG');
+}
+
+.team-grid .card:nth-child(4) .card-image {
+    background-image: url('../images/profilbilde/pfpHannah.jpg');
+}
+
+.team-grid .card:nth-child(5) .card-image {
+    background-image: url('../images/profilbilde/pfpAlexander.JPG');
+}
+
+.team-grid .card:nth-child(6) .card-image {
+    background-image: url('../images/profilbilde/pfpMikolaj.jpg');
+}
 
 
-        .card-name {
-            font-size: 18px;
-            font-weight: 700;
-            color: #ff526a;
-            margin-bottom: 12px;
-        }
+.card-role {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 0.5px;
+    margin-bottom: -10px;
+    font-weight: 700;
+}
 
 
-        .card-bio {
-            font-size: 12px;
-            color: #666;
-            line-height: 1.5;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
+.card-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff4059;
+    margin-bottom: -10px;
+}
+
+
+.card-name a {
+    text-decoration: none;
+    color: #ff4059;
+}
+
+
+.card-name a:hover {
+    text-decoration: underline;
+}
+
+
+.card-bio {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+
+
