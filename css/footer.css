@@ -106,6 +106,10 @@
     text-decoration: none;
 }
 
+.sosiale-medier > * > i{
+    margin-right: 5px;
+}
+
 .sosiale-medier a:hover {
     text-decoration: underline;
 }
