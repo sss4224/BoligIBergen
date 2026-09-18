@@ -13,24 +13,35 @@
 </head>
 <body>
      <main>
-        <nav>
-            <div class="logo-container">
-                <a href="index.html" class="nav-btn"><strong>BiB</strong></a>
+             <section class="nav-section">
+            <input type="checkbox" name="close-input" id="close-input">
+            <div class="open-container">
+                <label for="close-input"><i class="fa-solid fa-bars fa-lg"></i></label>
             </div>
-            <div class="btn-container">
-                <a href="index.html" class="nav-btn">Hjem</a>
-                <a href="#" class="nav-btn">Kontakt oss</a>
-                <a href="omOss.html" class="nav-btn active">Om oss</a>
-                <a href="#" class="nav-btn">Prosjekt</a>
-            </div>
-        </nav>
+            <nav>
+                <div class="logo-close-container">
+                    <div class="logo-container">
+                        <a href="index.html" class="nav-btn nav-logo"></a>
+                    </div>
+                    <div class="close-container">
+                        <label for="close-input"><i class="fa-solid fa-x"></i></label>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <a href="index.html" class="nav-btn">Hjem</a>
+                    <a href="index.html#kontakt-oss-id" class="nav-btn nav-btn-kontakt-oss">Kontakt oss</a>
+                    <a href="om-oss.html" class="nav-btn nav-btn-home active">Om oss</a>
+                    <a href="#" class="nav-btn">Prosjekt</a>
+                </div>
+            </nav>>
        
         <div class="team-grid">
-            <div class="card">
+
+            <a href="./personal-page/Herman.html" class="card">
                 <div class="card-image"></div>
                 <div class="card-role">Tittel</div>
                 <div class="card-name">
-                    <a href="./personal-page/Herman.html"><h3>Herman Elias Meling</h3></a>
+                    <h3>Herman Elias Meling</h3>
                 </div>
                 <div class="card-bio">
                     SDFlkj iekfsd lskdfsef lksjeflikjsdf<br>
@@ -47,15 +58,14 @@
                     <a href="https://www.linkedin.com/">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
-                </div>
-            </div>
+              </div>
 
 
-            <div class="card">
+                <a href="./personal-page/Sebastian.html" class="card">
                 <div class="card-image"></div>
                 <div class="card-role">Tittel</div>
                 <div class="card-name">
-                    <a href="./personal-page/Sebastian.html"><h3>Sebastian Fylkesnes</h3></a>
+                <h3>Sebastian Fylkesnes</h3>
                 </div>
                 <div class="card-bio">
                     SDFlkj iekfsd lskdfsef lksjeflikjsdf<br>
@@ -73,14 +83,13 @@
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
                 </div>
-            </div>
 
 
-            <div class="card">
+            <a href="./personal-page/Ateeq.html" class="card">
                 <div class="card-image"></div>
                 <div class="card-role">Tittel</div>
                 <div class="card-name">
-                    <a href="./personal-page/Ateeq.html"><h3>Ateeq Mir</h3></a>
+                   <h3>Ateeq Sakander Mir</h3>
                 </div>
                 <div class="card-bio">
                     SDFlkj iekfsd lskdfsef lksjeflikjsdf<br>
@@ -98,14 +107,13 @@
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
                 </div>
-            </div>
 
 
-            <div class="card">
+            <a href="./personal-page/Hannah.html" class="card">
                 <div class="card-image"></div>
                 <div class="card-role">Tittel</div>
                 <div class="card-name">
-                    <a href="./personal-page/Hannah.html"><h3>Hannah Rohringer</h3></a>
+                    <h3>Hannah Rohringer</h3>
                 </div>
                 <div class="card-bio">
                     SDFlkj iekfsd lskdfsef lksjeflikjsdf<br>
@@ -123,14 +131,13 @@
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
                 </div>
-            </div>
 
 
-            <div class="card">
+            <a href="./personal-page/Alexander.html" class="card">
                 <div class="card-image"></div>
                 <div class="card-role">Tittel</div>
                 <div class="card-name">
-                    <a href="./personal-page/Alexander.html"><h3>Alexander Eliassen</h3></a>
+                    <h3>Alexander Eliassen</h3>
                 </div>
                 <div class="card-bio">
                     SDFlkj iekfsd lskdfsef lksjeflikjsdf<br>
@@ -148,13 +155,12 @@
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
                 </div>
-            </div>
            
-            <div class="card">
+            <a href="./personal-page/Mikolaj.html" class="card">
                 <div class="card-image"></div>
                 <div class="card-role">Tittel</div>
                 <div class="card-name">
-                    <a href="./personal-page/Mikolaj.html"><h3>Mikolaj Muczek</h3></a>
+                    <h3>Mikolaj Muczek</h3>
                 </div>
                 <div class="card-bio">
                     SDFlkj iekfsd lskdfsef lksjeflikjsdf<br>
@@ -172,28 +178,40 @@
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
                 </div>
-            </div>
         </div>
-    </main>
+        <section class="footer-kontakt-oss" id="kontakt-oss-id">
+            <footer class="footer-kontakt-oss">
+                <div class="kontakt-container">
+                    <div class="spørsmål">
+                        <h1>Spørsmål om boligprisene?</h1>
+                        <h2>Send oss en melding</h2>
+                    </div>
+                    <form class="kontakt-skjema">
+                        <label for="navn">Navn</label>
+                        <input placeholder="Skriv inn navn">
+                    
+                        <label for="email">E-post</label>
+                        <input placeholder="Skriv inn e-post">
+                    
+                        <label for="melding">Spørsmål</label>
+                        <inputplaceholder="Skriv inn spørsmål">
+                    
+                        <button type="submit">Send melding</button>
+                    </form>
+                </div>
 
-
-    <section class="løsning"></section>
-    <section class="faq"></section>
-       
-    <section class="footer-kontakt-oss">
-        <footer>
-            <div class="spørsmål">
-                <h1>Spørsmål om boligprisene?</h1>
-                <h1>Send oss melding</h1>
-            </div>
-            <p>
-                <a href="instagram">@BoligIBergen</a>
-                <a href="github">Sjekk ut vår GitHub</a>
-                <a href="linkedin">Sjekk ut vår LinkedIn</a>
-            </p>
-            &copy; 2026 Bolig I Bergen A/S. All rights reserved.
-        </footer>
-    </section>
-    <script src="https://kit.fontawesome.com/3887c28c13.js" crossorigin="anonymous"></script>
-</body>
+                <div class="footer-bunn">
+                    <div class="sosiale-medier">
+                        <a href="https://instagram.com">@BoligIBergen</a>
+                        <a href="https://github.com">Sjekk ut vår GitHub</a>
+                        <a href="https://linkedin.com">Sjekk ut vår LinkedIn</a>
+                    </div>
+                
+                    <p class="copyright">
+                        &copy; 2026 Bolig I Bergen A/S. All rights reserved.
+                    </p>
+                </div>
+            </footer>
+        </section>
+  </main>
 </html>
