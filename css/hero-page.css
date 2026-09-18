@@ -57,9 +57,9 @@
     height: 50vh;
     box-sizing: border-box;
 
-    background-color: #fff5e9;
+    background-color: #fff5e900;
 
-    padding: 40px 7%;
+    padding: 40px max(100px, 10%);
 
     display: flex;
     
@@ -113,8 +113,8 @@
 
 
 .hero-map {
-    width: 360px;
-    height: 360px;
+    width: 40vh;
+    height: 40vh;
 }
 
 .hero-map img {
