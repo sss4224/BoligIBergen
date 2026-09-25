@@ -43,11 +43,14 @@ border-bottom: 6px solid #367CFF;
 
     margin-bottom: 5vw;
     border-radius: 10px;
+    padding: 24px;
 
     background-color: rgb(225, 248, 255);
 
     display: grid;
     grid-template-columns:1fr 1fr;
+    row-gap: 12px;
+    column-gap: 24px;
     justify-content: center;
     place-items: center;
 
@@ -55,6 +58,6 @@ border-bottom: 6px solid #367CFF;
 
 .data-card{
     background-color: white;
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
 }
