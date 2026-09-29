@@ -1127,15 +1127,21 @@ background-color: rgba(220, 220, 220, 0.5);
     align-items: center;    
     text-align: center;
     margin: 20px auto;
-    padding: 15px;
+    padding: 20px;
     width: 70%;
     border-radius: 20px;
     color: black;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255);
     border: 1px solid rgba(100, 100, 100, 0.25);
+    text-decoration: none;
 }
 
 .prosj h2 {
     margin: 0 0 10px 0;
+    
 }
 
+.prosj-link {
+    text-decoration: none;
+    color: inherit;
+}
