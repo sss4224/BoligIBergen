@@ -34,14 +34,27 @@
         </section>
         <section>
             <h2 class="data-header">Bolig Data</h2>
-            <div class="data-container">
-                <div class="data-card"></div>
-                <div class="data-card"></div>
-                <div class="data-card"></div>
-                <div class="data-card"></div>
-            </div>
+    <div class="data-container">
+
+        <div class="data-card"></div>
+
+        <!-- LINE GRAPH -->
+        <div class="data-card">
+            <canvas id="linearChart"></canvas>
+        </div>
+
+        <!-- COLUMN GRAPH -->
+        <div class="data-card">
+            <canvas id="columnChart"></canvas>
+        </div>
+
+        <div class="data-card"></div>
+
+    </div>
         </section>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-        <script src="../js/data-page.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="../js/data.js"></script>
+
 </body>
 </html>
