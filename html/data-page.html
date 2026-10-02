@@ -34,27 +34,25 @@
         </section>
         <section>
             <h2 class="data-header">Bolig Data</h2>
-    <div class="data-container">
-
-        <div class="data-card"></div>
-
-        <!-- LINE GRAPH -->
-        <div class="data-card">
-            <canvas id="linearChart"></canvas>
-        </div>
-
-        <!-- COLUMN GRAPH -->
-        <div class="data-card">
-            <canvas id="columnChart"></canvas>
-        </div>
-
-        <div class="data-card"></div>
-
-    </div>
+            <div class="data-container">
+                <div class="data-card tabell-card">
+                    <div class="stats-over-tid-container">
+                        <table class="tabell-data">
+                            <tr><th>Område</th><th>2024</th><th>2025</th><th>2026</th></tr>
+                            <tr><td>Sentrum</td><td>68,500 kr/m2</td><td>74000 kr/m2</td><td>80300 kr/m2</td></tr>
+                            <tr><td>Fana</td><td>48500 kr/m2</td><td>51500 kr/m2</td><td>55200 kr/m2</td></tr>
+                            <tr><td>Åsane</td><td>39000 kr/m2</td><td>41500 kr/m2</td><td>44400 kr/m2</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="data-card cake-tabell-data">
+                    <canvas id="cake-container"></canvas>
+                </div>
+                <div class="data-card"></div>
+                <div class="data-card"></div>
+            </div>
         </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script src="../js/data.js"></script>
-
+        <script src="../js/data-page.js"></script>
 </body>
 </html>
