@@ -333,6 +333,25 @@ nav{
     box-sizing: border-box;
 }
 
+.more-stats-btn{
+    background-color: #367CFF;
+    color: white;
+    
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 5px gray;
+
+    cursor: pointer;
+}
+.more-stats-btn:hover{
+    background-color: color-mix(in srgb, #367CFF, #000000 5%);
+
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px gray;
+}
+
 /*solutions*/
 .solutions {
     width: 100%;
