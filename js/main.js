@@ -1,7 +1,17 @@
 
+const contactForm = document.querySelector('.kontakt-skjema');
+
+
 
 checkForSection('kontakt-oss-id');
 stopAnimationOnResize();
+
+
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+})
+
 
 function checkForSection(section){
 

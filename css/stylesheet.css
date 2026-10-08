@@ -342,6 +342,7 @@ nav{
     border-radius: 10px;
     border: none;
     box-shadow: 0 0 5px gray;
+    text-decoration: none;
 
     cursor: pointer;
 }
@@ -358,6 +359,10 @@ nav{
     min-height: 100vh;
     padding: clamp(30px, 5vw, 80px) 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /* solutions header */
@@ -375,9 +380,6 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin: clamp(30px, 8vw, 120px) auto
-            clamp(30px, 5vw, 60px);
 
     padding: 20px;
 
@@ -733,10 +735,12 @@ nav{
 .faq {
 padding: clamp(30px, 5vw, 80px) 20px;
 width: 100%;
-min-height: auto;
+min-height: 80vh;
 box-sizing: border-box;
 background-color: #FFF0D8;
 overflow: hidden;
+display: flex;
+flex-direction: column;
 }
 
 
@@ -773,9 +777,8 @@ display: flex;
 
 width: 100%;
 
-margin: 0;
+margin: auto;
 
-align-items: stretch;
 gap: 25%;
 box-sizing: border-box;
 }
@@ -866,7 +869,7 @@ background-color: rgba(220, 220, 220, 0.5);
 .footer-kontakt-oss {
     height: 100vh;
     box-sizing: border-box;
-    padding: 30px 20px;
+    padding: 30px 50px;
 
     display: flex;
     flex-direction: column;
@@ -883,14 +886,17 @@ background-color: rgba(220, 220, 220, 0.5);
     background-color: white;
     color: black;
     border-radius: 12px;
-    text-align: left;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .kontakt-container {
     display: flex;
-    justify-content: center;
-    gap: 100px;
-   margin-top: 20vh;
+    justify-content: space-evenly;
+    margin-top: 20vh;
 }
 
 .kontakt-skjema {
@@ -898,9 +904,9 @@ background-color: rgba(220, 220, 220, 0.5);
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 400px;
+    max-width: fit-content;
     height: 300px;
-
+    position: relative;
 }
 
 .kontakt-skjema input {
@@ -921,11 +927,6 @@ background-color: rgba(220, 220, 220, 0.5);
     font-size: 16px;
     resize: none;
     height: 250px;
-}
-
-
-.spørsmål h1 {
-    margin: 10px 0;
 }
 
 .footer-bunn {
@@ -965,7 +966,22 @@ background-color: rgba(220, 220, 220, 0.5);
 
 .bunntekst p {
     margin: 0;
-    padding: 0 10px;
+}
+
+.submit-btn{
+    aspect-ratio: 1 / 1;
+    width: 35px;
+
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+    background-color: #367CFF;
+    color: white;
+
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }
 
 /*omOss*/
@@ -1102,6 +1118,11 @@ background-color: rgba(220, 220, 220, 0.5);
 }
 
 /*Prosjekt*/
+
+.prosjekt{
+    min-height: 100vh;
+}
+
 #tittel-Prosj {
     text-align: center;
 
@@ -1134,14 +1155,19 @@ background-color: rgba(220, 220, 220, 0.5);
     border-bottom: 6px solid #ff4059;
 }
 
+.proj-container{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10vh 0;
 
-
-
-
+}
 
 .prosj {
     display: flex;
     flex-direction: column; 
+    justify-content: center;
     align-items: center;    
     text-align: center;
     margin: 20px auto;
@@ -1152,6 +1178,7 @@ background-color: rgba(220, 220, 220, 0.5);
     background-color: rgba(255, 255, 255);
     border: 1px solid rgba(100, 100, 100, 0.25);
     text-decoration: none;
+    min-height: 10vh;
 }
 
 .prosj h2 {
@@ -1164,3 +1191,95 @@ background-color: rgba(220, 220, 220, 0.5);
     color: inherit;
 }
 
+
+/*More-data-page*/
+
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+
+.data-header {
+    text-align: center;
+    font-size: clamp(32px, 5vw, 60px);
+    font-weight: 300;
+    
+    width: min(25%, 1050px);
+    min-height: 100px;
+    height: auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 10vw auto 80px auto;
+    
+    background-color: rgba(255, 255, 255, .5);
+    border: 1px solid rgba(100, 100, 100, 0.25);
+    border-radius: 10px;
+    
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    
+    border-bottom: 6px solid #367CFF;
+}
+
+.data-container {
+    min-height: 40vw;
+    width: 70vw;
+
+    margin: 0 auto 5vw auto;
+    padding: 24px;
+
+    border-radius: 10px;
+    background-color: rgb(225, 248, 255);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+
+    box-sizing: border-box;
+}
+
+.data-card {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabell-card{
+    height: 100%;
+    width: 100%;
+    cursor: default;
+}
+
+th{
+    background-color: rgb(243, 243, 99);
+}
+
+tr > td:first-child{
+    background-color: lightgreen;
+}
+
+.tabell-data, td, th{
+    border: 2px solid black;
+}
+
+.tabell-data{
+    background-color: white;
+    border-collapse: collapse;
+}
+
+.th, td{
+    padding: 15px;
+}
+
+#cake-container{
+    height: 90%;
+    max-width: 90%;
+}
