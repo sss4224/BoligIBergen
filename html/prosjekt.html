@@ -36,18 +36,20 @@
         <section class="prosjekt">
             <h2 id="tittel-Prosj">Om prosjekt</h2>
 
-            <div class="prosj">
-                <h2>Kort om siden</h2>
-                <p>Dette prosjektet handler om å utvikle en brukervennlig nettside for bolig og informasjon i Bergen.</p>
-            </div>
-
-            <div class="prosj"> 
-                <h2>Mål</h2>
-                <p>Vi ønsker å lage en oversiktlig og moderne nettside som er enkel å navigere og bruke.</p>
-            </div>
-
-            <div class="prosj">
-                <a href="https://buymeacoffee.com/" class="prosj-link"><h2>Buy me a coffee</h2></a>
+            <div class="proj-container">
+                <div class="prosj">
+                    <h2>Kort om siden</h2>
+                    <p>Dette prosjektet handler om å utvikle en brukervennlig nettside for bolig og informasjon i Bergen.</p>
+                </div>
+    
+                <div class="prosj"> 
+                    <h2>Mål</h2>
+                    <p>Vi ønsker å lage en oversiktlig og moderne nettside som er enkel å navigere og bruke.</p>
+                </div>
+    
+                <div class="prosj">
+                    <a href="https://buymeacoffee.com/" class="prosj-link"><h2>Buy me a coffee</h2></a>
+                </div>
             </div>
         </section>
 
@@ -58,11 +60,21 @@
                         <h1>Spørsmål om boligprisene?</h1>
                         <h2>Send oss en melding</h2>
                     </div>
-                    <div class="kontakt-skjema">
+                    <form class="kontakt-skjema">
+
                         <input placeholder="Skriv inn navn">
-                        <input placeholder="Skriv inn e-post">
+                    
+                      
+                        <input type="email" placeholder="Skriv inn e-post">
+                    
+                
                         <textarea placeholder="Skriv inn spørsmål"></textarea>
-                    </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+            
+                    </form>
                 </div>
 
                 <div class="footer-bunn">
