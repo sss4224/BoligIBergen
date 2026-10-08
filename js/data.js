@@ -2,8 +2,29 @@
 // BOLIG DATA
 document.addEventListener("DOMContentLoaded", function () {
 
+    // DOUGHNUT GRAPH - BOX 2
 
-    // LINE GRAPH - BOX 2
+    const doughnutChart = document.querySelector("#doughnut-chart");
+
+    new Chart(doughnutChart, {
+        type: "doughnut",
+        data: {
+            labels: ["Sentrum", "Fana", "Åsane"],
+            datasets: [{
+                backgroundColor: ["#367CFF", "#FF6FAE", "#F5C542"],
+                data: [74266, 51733, 41633]
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: "Gjennomsnittligpris per m2 for 2024-2026"
+            }
+        }
+    });
+
+
+    // LINE GRAPH - BOX 3
  
 
     const linearChart = document.getElementById("linearChart");
@@ -14,8 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         data: {
             labels: ["2024", "2025", "2026"],
 
-            datasets: [
-    {
+            datasets: [{
         label: "Sentrum",
         data: [68500, 74000, 80300],
         fill: false,
@@ -96,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    // COLUMN GRAPH - BOX 3
+    // COLUMN GRAPH - BOX 4
   
     const columnChart = document.getElementById("columnChart");
 
