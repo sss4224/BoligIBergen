@@ -5,49 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MikolajM</title>
     <link rel="stylesheet" href="../../css/stylesheet.css">
-    <style>
-        /* lille ekstra om bildet */
-        .photo { position: relative; margin: 0 0 20px; transform: rotate(-2deg); transition: transform .3s; }
-        .photo:hover { transform: rotate(2deg) scale(1.03); }
-        .photo .produkt-bilde { margin-bottom: 0; border: 2px solid black; box-shadow: 6px 6px 0 black; }
-        .photo figcaption { position: absolute; right: -10px; bottom: 14px; background: #ffd23f; border: 2px solid black; border-radius: 8px; padding: 4px 12px; font-weight: 700; font-size: 15px; transform: rotate(5deg); }
-
-        .tabell-data tr:hover td { background-color: #bff0bf; }
-
-        /* Balansert grid for bilde + tekst */
-        .kort-container {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 20px;
-        }
-
-        @media (max-width: 900px) {
-            .kort-container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .kort {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        /* GDPR popup*/
-        #gdpr-input { display: none; }
-        #gdpr-input:checked ~ .gdpr { display: none; }
-        .gdpr { position: fixed; inset: 0; z-index: 1000; display: flex; justify-content: center; align-items: center; padding: 12px; box-sizing: border-box; background-color: rgba(0, 0, 0, .6); }
-        .gdpr-boks { display: flex; flex-direction: column; width: min(820px, 100%); max-height: 80vh; background: white; border-radius: var(--mbr); box-shadow: 0 0 20px rgba(0, 0, 0, .5); overflow: hidden; }
-        .gdpr-boks header { padding: 10px 16px 6px; border-bottom: 1px solid #ddd; }
-        .gdpr-boks h2 { margin: 0; font-size: 20px; }
-        .gdpr-boks header p { margin: 2px 0 0; font-size: 12px; color: #666; }
-        .gdpr-liste { flex: 1; overflow-y: auto; padding: 6px 16px; columns: 2 300px; column-gap: 24px; }
-        .gdpr-liste label { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; break-inside: avoid; font-size: 13px; line-height: 1.3; }
-        .gdpr-liste input { flex-shrink: 0; width: 15px; height: 15px; margin: 1px 0 0; }
-        .gdpr-liste em { color: #ff4059; font-size: 10px; font-style: normal; font-weight: 700; }
-        .gdpr-knapper { display: flex; justify-content: flex-end; align-items: center; gap: 10px; padding: 8px 16px; border-top: 1px solid #ddd; }
-        .gdpr-knapper label { cursor: pointer; font-size: 15px; padding: 10px 16px; }
-    </style>
+    <link rel="stylesheet" href="../../css/mikolaj.css">
 </head>
 <body>
 
