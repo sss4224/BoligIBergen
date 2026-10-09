@@ -1,0 +1,257 @@
+
+/* Herman Elias sin personlige side */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.profile {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: #fff2cc;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    font-family: 'Times New Roman';
+    color: #2c2a2a;
+}
+
+.profile-image {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 0 auto 25px;
+}
+
+.profile h1 {
+    color: #b4a7d6;
+    font-size: 38px;
+}
+
+.profile h2 {
+    color: #b4a7d6;
+}
+
+.profile p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+
+@media (max-width: 600px) {
+    .profile {
+        width: auto;
+        margin: 20px 12px;
+        padding: 20px;
+    }
+
+    .profile h1 {
+        font-size: 25px;
+    }
+
+}
+
+
+
+
+/* HEADER */
+.herman-header {
+    background-color: #fff2cc;
+    padding: 15px 40px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h2 {
+    color: #b4a7d6;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* HJEM-KNAPP */
+.home-btn {
+    display: inline-block;
+    background-color: #b4a7d6;
+    color: #fff2cc;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home-btn:hover {
+    background-color: #9e7e9e;
+}
+
+/* FOOTER */
+.herman-footer {
+    background-color: #fff2cc;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 1px solid #b4a7d6;
+}
+
+.herman-footer p {
+    color: #777777;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* RESPONSIV */
+@media (max-width: 600px) {
+    .herman-header {
+        padding: 15px 20px;
+    }
+
+    .header-content h2 {
+        font-size: 20px;
+    }
+
+    .home-btn {
+        padding: 8px 15px;
+    }
+}
+
+
+.profile-image {
+    display: block;
+    width: 100%;
+    max-width: 550px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 0 auto 30px;
+}
+
+
+
+body {
+    font-family: Georgia, serif;
+}
+
+.profile h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.profile h2 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.profile p {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+body {
+    background-color: #c4b5c4;
+}
+
+
+
+/* Book */
+.cosmere-list {
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: Georgia, serif;
+}
+
+/* Nivå */
+.cosmere-row {
+    display: flex;
+    align-items: stretch;
+    background-color: #252525;
+    border-bottom: 2px solid #444;
+    min-height: 160px;
+}
+
+/* Farve */
+.cosmere-label {
+    width: 180px;
+    min-width: 180px;
+    box-sizing: border-box;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #292222;
+}
+
+/* Nivå farger */
+.cosmere-s { background-color: #7f8cff; }
+.cosmere-a { background-color: #7ffffb; }
+.cosmere-b { background-color: #7fffd9; }
+.cosmere-c { background-color: #8de38c; }
+.cosmere-d { background-color: #d9e89b; }
+
+/* Bok kover konteiner */
+.cosmere-books {
+    flex: 1;
+    min-width: 0;
+    padding: 18px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individ bok og tittel */
+.book-card {
+    width: 100px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+
+
+/* Mobil */
+@media (max-width: 600px) {
+    .cosmere-row {
+        flex-direction: column;
+    }
+
+    .cosmere-label {
+        width: 100%;
+        min-width: 0;
+        min-height: 60px;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .cosmere-books {
+        padding: 14px;
+        gap: 14px;
+    }
+
+    .book-card {
+        width: 80px;
+    }
+
+    .book-title {
+        font-size: 11px;
+    }
+}
