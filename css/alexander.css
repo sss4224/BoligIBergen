@@ -16,6 +16,7 @@ border: 3px solid rgb(183, 0, 0);
 
 margin-left: 30px;
 margin-right: 30px;
+border-radius:10px;
 
 
 
@@ -30,11 +31,7 @@ height: 400px;
 width:auto;
 
 border: 3px solid rgb(183, 0, 0);
-
-
-
-
-
+border-radius:10px;
 
 }
 
@@ -149,8 +146,8 @@ margin: 30px;
 height: 300px;
 width: auto;
 border: 3px solid rgb(183, 0, 0);
-
 margin: 30px;
+border-radius:10px;
 
 
 
@@ -170,6 +167,7 @@ width: auto;
 border: 3px solid rgb(183, 0, 0);
 
 margin: 30px;
+border-radius:10px;
 
 }
 .bilderavfrankrike-bottom {
