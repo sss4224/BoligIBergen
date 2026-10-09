@@ -176,3 +176,80 @@ body {
 body {
     background-color: #FCEEF0;
 }
+
+
+
+/* TIER LIST */
+.tier-list {
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: Georgia, serif;
+}
+
+.tier-row {
+    display: flex;
+    background-color: #242424;
+    border-bottom: 2px solid #444;
+    min-height: 90px;
+}
+
+.tier-label {
+    width: 90px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #222;
+}
+
+.tier-s {
+    background-color: #ff7f7f;
+}
+
+.tier-a {
+    background-color: #ffbf7f;
+}
+
+.tier-b {
+    background-color: #ffe17f;
+}
+
+.tier-c {
+    background-color: #b8e38c;
+}
+
+.tier-d {
+    background-color: #9bd9e8;
+}
+
+.tier-shows {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px;
+}
+
+.tier-shows span {
+    background-color: #424242;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .tier-label {
+        width: 60px;
+        font-size: 28px;
+    }
+
+    .tier-shows span {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
