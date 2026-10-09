@@ -1,14 +1,39 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: black;
+    font-family: "New Rocker", system-ui;
 }
+
 
 .bildeavmeg img{
 
-width: 200px;
-height: auto;
-border: 4px solid grey;
-border-radius: 20px;
-margin: 50px;
+height: 400px;
+width: auto;
+border: 3px solid rgb(183, 0, 0);
+
+margin-left: 30px;
+margin-right: 30px;
+
+
+
+
+
+}
+
+.storrebilde img {
+
+
+height: 400px;
+width:auto;
+
+border: 3px solid rgb(183, 0, 0);
+
+
+
+
 
 
 }
@@ -18,6 +43,7 @@ margin: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 30px;
 }
 
 p {
@@ -26,10 +52,25 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin: 50px;
+    
+}
+
+h6 {
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 60px;
+    margin: 50px;
+    
 }
 .fav-bands, .frankrike {
 
-font-size: 25px;
+font-size: 30px;
 color: white;
     display: flex;
     align-items: center;
@@ -41,4 +82,110 @@ color: white;
   font-family: "New Rocker", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+    background-color: black;
+    border-bottom: 2px solid white;
+}
+
+.logo {
+    color: rgb(183, 0, 0);
+    font-family: "New Rocker", system-ui;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.nav-lenker {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-lenker a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.nav-lenker a:hover {
+    color: rgb(183, 0, 0);
+}
+
+
+.bilderavbands {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.bilderavbands img{
+
+height: 100px;
+width: auto;
+border: 3px solid white;
+border-radius: 20px;
+margin: 30px;
+
+
+
+}
+
+.bilderavbands a :hover{
+
+    border-color: rgb(183, 0, 0);
+    transform: scale(1.1);
+}
+
+
+.bilderavfrankrike-top img{
+
+height: 300px;
+width: auto;
+border: 3px solid rgb(183, 0, 0);
+
+margin: 30px;
+
+
+
+}
+.bilderavfrankrike-top {
+
+    display: flex;
+   
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.bilderavfrankrike-bottom img{
+
+height: 300px;
+width: auto;
+border: 3px solid rgb(183, 0, 0);
+
+margin: 30px;
+
+}
+.bilderavfrankrike-bottom {
+
+    display: flex;
+ 
+    justify-content: center;
+    margin: 30px;
+}
+
+.footer-alexander {
+
+background-color: rgb(183, 0, 0);
+padding: 50px;
+border-radius: 10px;
+display: flex;
+justify-content: space-between;
+
 }
