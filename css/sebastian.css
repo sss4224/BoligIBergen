@@ -151,7 +151,7 @@ body{
 
 .hero-img-container{
     width: 100%;
-    background-image: linear-gradient(to right ,rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0)), url('../images/sebastian-personlig/hero-bilde.jpg');
+    background-image: linear-gradient(to right ,rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0)), url('../images/sebastian-personlig/hero-bilde.jpg');
     background-size: cover;
     background-position: center 48%;
     background-repeat: no-repeat;
