@@ -1,8 +1,13 @@
 
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
 html, body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     
     background-color: #0B1220;
     color: #E8EDF5;
@@ -11,6 +16,11 @@ html, body{
 body{
     display: flex;
     min-height: 100vh;
+}
+
+main{
+    flex: 1;
+    min-width: 0;
 }
 
 
@@ -31,7 +41,7 @@ body{
     width: fit-content;
     padding: 1em;
 
-    font-size: 1vw;
+    font-size: clamp(0.95rem, 1vw, 1.1rem);
 }
 
 .nav-container > .logo > a{
@@ -74,23 +84,26 @@ body{
 
 
 .seb-hero{
-    height: 40vh;
+    min-height: 26rem;
     width: 100%;
+
+    display: flex;
 
     cursor: default;
 }
 
 .hero-img-container{
-    height: 100%;
+    min-height: inherit;
     width: 100%;
 }
 
 .hero-info-container{
-    width: 40vw;
+    width: min(42rem, 100%);
     height: 100%;
-    font-size: 1vw;
+    font-size: clamp(0.95rem, 1vw, 1.1rem);
     padding-top: 24px;
-    padding-left: 48px;
+    padding-left: clamp(1.5rem, 4vw, 3rem);
+    padding-right: clamp(1.5rem, 4vw, 3rem);
     color: lightgray;
 
     display: flex;
@@ -106,8 +119,8 @@ body{
 
 .hero-info-container > h1{
     font-family: serif;
-    font-size: 2vw;
-    text-wrap: no-wrap;
+    font-size: clamp(2rem, 4vw, 4rem);
+    text-wrap: nowrap;
 
     color: #E8EDF5;
 }
@@ -131,7 +144,7 @@ body{
 }
 
 .hero-about-me-text{
-    width: 70%;
+    width: min(100%, 32rem);
     text-wrap: pretty;
     line-height: 1.5;
 }
@@ -167,6 +180,7 @@ body{
     height: fit-content;
 
     padding-top: 2rem;
+    width: 100%;
 }
 .content-container  p{
     font-family: Arial, Helvetica, sans-serif;
@@ -174,8 +188,8 @@ body{
 }
 
 .small-card{
-    height: 5vh;
-    width: 10vw;
+    min-height: 4.5rem;
+    width: 100%;
 
     display: flex;
     justify-content: flex-start;
@@ -202,9 +216,9 @@ body{
 
 .personlig-container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 10vw;
-    padding: 0 5rem;
+    grid-template-columns: minmax(16rem, 1fr) minmax(18rem, 1.2fr) minmax(18rem, 1.1fr);
+    gap: 2rem clamp(2rem, 6vw, 8rem);
+    padding: 0 clamp(1.5rem, 5vw, 5rem);
 }
 
 .interesse-container > ul{
@@ -219,14 +233,14 @@ body{
 }
 
 .about-me-container{
-    font-size: 1vw;
+    font-size: clamp(1rem, 1vw, 1.1rem);
     line-height: 1.75;
 }
 
 .facts-card{
     background-color: #151F2E;
     border-radius: 20px;
-    padding: 0 4rem;
+    padding: 0 clamp(1.25rem, 3vw, 4rem);
     display: flex;
     flex-direction: column;
 }
@@ -266,19 +280,19 @@ body{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 0 5rem;
+    padding: 0 clamp(1.5rem, 5vw, 5rem);
     box-sizing: border-box;
 }
 
 .ekstra-tekst-seksjon p {
-    font-size: 0.75vw;
+    font-size: clamp(0.95rem, 1vw, 1.05rem);
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: lightgray;
     width: 100%;
 }
 .ekstra-tekst-seksjon{
-    font-size: 1.25vw;
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
 }
 
 .hurtig-tabell {
@@ -308,4 +322,136 @@ body{
 
 .hurtig-tabell tr:hover {
     background-color: color-mix(in srgb, #151F2E, #79A9FF 5%);
+}
+
+@media (max-width: 1450px){
+    .personlig-container{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .facts-card{
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 850px){
+    body{
+        flex-direction: column;
+    }
+
+    .seb-nav{
+        width: 100%;
+        height: auto;
+        z-index: 10;
+    }
+
+    .nav-container{
+        width: 100%;
+        padding: 0.75rem 1rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .nav-container > .logo > a{
+        font-size: 2rem;
+        padding-left: 0;
+    }
+
+    .nav-container > .nav-btn{
+        min-width: 0;
+    }
+
+    .nav-container > .nav-btn > ul{
+        width: auto;
+        margin: 0;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 0.25rem 0.75rem;
+
+        line-height: 1.4;
+    }
+
+    .nav-container > .nav-btn > ul > li{
+        padding-left: 0;
+    }
+
+    .nav-container > .nav-btn > ul > li > a{
+        padding: 0.35rem 0;
+    }
+
+    .seb-hero{
+        min-height: 32rem;
+    }
+
+    .hero-info-container{
+        justify-content: center;
+        gap: 1.25rem;
+    }
+
+    .personlig-container{
+        grid-template-columns: 1fr;
+    }
+
+    .interesse-container > ul{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .facts-card{
+        grid-column: auto;
+    }
+
+    .hurtig-tabell{
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 560px){
+    .nav-container{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nav-container > .nav-btn > ul{
+        justify-content: flex-start;
+    }
+
+    .seb-hero{
+        min-height: 34rem;
+    }
+
+    .hero-info-container > h1{
+        font-size: clamp(2rem, 11vw, 3rem);
+        text-wrap: balance;
+    }
+
+    .about-me-list > ul{
+        gap: 0.5rem 0.75rem;
+    }
+
+    .about-me-list > ul > li:not(:last-child){
+        margin-right: 0;
+    }
+
+    .about-me-list > ul > li:not(:last-child):after{
+        margin-left: 0.75rem;
+    }
+
+    .interesse-container > ul{
+        grid-template-columns: 1fr;
+    }
+
+    .fakta-tabell td {
+        padding: 1rem 0.5rem;
+    }
+
+    .fakta-ikon > i {
+        font-size: 1.4rem;
+    }
 }
