@@ -3,9 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MikolajM</title>
+    <link rel="stylesheet" href="../../css/stylesheet.css">
+    <style>
+        /* lille ekstra om bildet */
+        .photo { position: relative; margin: 0 0 20px; transform: rotate(-2deg); transition: transform .3s; }
+        .photo:hover { transform: rotate(2deg) scale(1.03); }
+        .photo .produkt-bilde { margin-bottom: 0; border: 2px solid black; box-shadow: 6px 6px 0 black; }
+        .photo figcaption { position: absolute; right: -10px; bottom: 14px; background: #ffd23f; border: 2px solid black; border-radius: 8px; padding: 4px 12px; font-weight: 700; font-size: 15px; transform: rotate(5deg); }
+
+        .tabell-data tr:hover td { background-color: #bff0bf; }
+
+        /* Balansert grid for bilde + tekst */
+        .kort-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .kort-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .kort {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* GDPR popup*/
+        #gdpr-input { display: none; }
+        #gdpr-input:checked ~ .gdpr { display: none; }
+        .gdpr { position: fixed; inset: 0; z-index: 1000; display: flex; justify-content: center; align-items: center; padding: 12px; box-sizing: border-box; background-color: rgba(0, 0, 0, .6); }
+        .gdpr-boks { display: flex; flex-direction: column; width: min(820px, 100%); max-height: 80vh; background: white; border-radius: var(--mbr); box-shadow: 0 0 20px rgba(0, 0, 0, .5); overflow: hidden; }
+        .gdpr-boks header { padding: 10px 16px 6px; border-bottom: 1px solid #ddd; }
+        .gdpr-boks h2 { margin: 0; font-size: 20px; }
+        .gdpr-boks header p { margin: 2px 0 0; font-size: 12px; color: #666; }
+        .gdpr-liste { flex: 1; overflow-y: auto; padding: 6px 16px; columns: 2 300px; column-gap: 24px; }
+        .gdpr-liste label { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; break-inside: avoid; font-size: 13px; line-height: 1.3; }
+        .gdpr-liste input { flex-shrink: 0; width: 15px; height: 15px; margin: 1px 0 0; }
+        .gdpr-liste em { color: #ff4059; font-size: 10px; font-style: normal; font-weight: 700; }
+        .gdpr-knapper { display: flex; justify-content: flex-end; align-items: center; gap: 10px; padding: 8px 16px; border-top: 1px solid #ddd; }
+        .gdpr-knapper label { cursor: pointer; font-size: 15px; padding: 10px 16px; }
+    </style>
 </head>
 <body>
-    
+
+<!-- GDPR -->
+<input type="checkbox" id="gdpr-input">
+<div class="gdpr">
+    <div class="gdpr-boks" role="dialog" aria-labelledby="gdpr-tittel">
+        <header>
+            <h2 id="gdpr-tittel">Personvern og informasjonskapsler</h2>
+            <p>Vi bryr oss om personvernet ditt. Jeg samtykker til:</p>
+        </header>
+        <div class="gdpr-liste">
+            <label><input type="checkbox" checked disabled> Nødvendige informasjonskapsler (kan ikke velges bort) <em>PÅKREVD</em></label>
+            <label><input type="checkbox" checked disabled> Jeg har lest og forstått personvernerklæringen (alle 84 sidene) <em>PÅKREVD</em></label>
+            <label><input type="checkbox" checked disabled> Jeg er over 18 år, eller har en voksen i nærheten <em>PÅKREVD</em></label>
+            <label><input type="checkbox" checked> Funksjonelle informasjonskapsler, også de med sjokolade</label>
+            <label><input type="checkbox" checked> Analysekapsler som teller hvor mange ganger jeg trykker «oppdater»</label>
+            <label><input type="checkbox" checked> Markedsføringskapsler som følger meg til jeg kjøper noe</label>
+            <label><input type="checkbox" checked> Tredjepartskapsler fra selskaper jeg aldri har hørt om</label>
+            <label><input type="checkbox" checked> Annonser for ting jeg bare har tenkt på</label>
+            <label><input type="checkbox" checked> Profilering: «brukertype: har sittet foran skjermen for lenge»</label>
+            <label><input type="checkbox" checked> Lagring av IP-adressen min, og kallenavnet vi gir den</label>
+            <label><input type="checkbox" checked> Innsamling av enhetsinfo, inkludert hvor ladet batteriet er</label>
+            <label><input type="checkbox" checked> Lagring av posisjonen min, selv når jeg sier nei</label>
+            <label><input type="checkbox" checked> Sporing på tvers av nettsteder, apper og kjøleskap</label>
+            <label><input type="checkbox" checked> Deling av data med annonsepartnere (og deres partnere, og deres partnere)</label>
+            <label><input type="checkbox" checked> Salg av data til høystbydende, med mindre noen byr mer</label>
+            <label><input type="checkbox" checked> Overføring av data til land jeg ikke kan stave</label>
+            <label><input type="checkbox" checked> Lagring av data i 10 år, eller til serveren tar fyr</label>
+            <label><input type="checkbox" checked> Automatiske avgjørelser tatt av en algoritme som har en dårlig dag</label>
+            <label><input type="checkbox" checked> Analyse av musebevegelsene mine når jeg nøler</label>
+            <label><input type="checkbox" checked> Opptak av økten min, også når jeg åpnet siden og gikk bort</label>
+            <label><input type="checkbox" checked> Bruk av e-posten min til «spesielle tilbud» hver time</label>
+            <label><input type="checkbox" checked> Nyhetsbrev jeg aldri meldte meg på</label>
+            <label><input type="checkbox" checked> Push-varsler som sier «Vi savner deg» etter 3 minutter</label>
+            <label><input type="checkbox" checked> At vilkårene endres uten varsel</label>
+            <label><input type="checkbox" checked> At jeg later som om jeg leste endringene</label>
+            <label><input type="checkbox" checked> Bruk av dataene mine til å trene en AI som en dag blir sjefen min</label>
+            <label><input type="checkbox" checked> Deling av data med selskaper i samme konsern, også kantina</label>
+            <label><input type="checkbox" checked> Lagring av søkehistorikken min, inkludert søkene klokken 03:00</label>
+            <label><input type="checkbox" checked> Lagring av kjøpshistorikk, også impulskjøp</label>
+            <label><input type="checkbox" checked> Ansiktsgjenkjenning, også når jeg ser trøtt ut</label>
+            <label><input type="checkbox" checked> Tilgang til kontaktlisten min (de blir veldig overrasket)</label>
+            <label><input type="checkbox" checked> Tilgang til kamera og mikrofon «for kvalitetssikring»</label>
+            <label><input type="checkbox" checked> Tilgang til bildene mine, men bare de gode</label>
+            <label><input type="checkbox" checked> Måling av hvor lenge jeg ser på hver enkelt ting</label>
+            <label><input type="checkbox" checked> Demografisk analyse: alder, interesser og sannsynlig kaffeforbruk</label>
+            <label><input type="checkbox" checked> Deling av data med forskere som studerer «nettbrukere i fangenskap»</label>
+            <label><input type="checkbox" checked> Lagring av «anonymiserte» data for alltid, med navn og adresse</label>
+            <label><input type="checkbox" checked> At personvernet mitt er «en prioritet» (ikke nødvendigvis min)</label>
+            <label><input type="checkbox" checked> Overdragelse av sjelen min (utløper aldri)</label>
+            <label><input type="checkbox" checked> Overdragelse av førstefødte, kun ved mislighold (eller på en tirsdag)</label>
+        </div>
+        <div class="gdpr-knapper">
+            <label for="gdpr-input" class="btn">Lagre valg</label>
+            <label for="gdpr-input" class="more-stats-btn">Godta alle</label>
+        </div>
+    </div>
+</div>
+
+<main>
+    <input type="checkbox" name="close-input" id="close-input">
+
+    <div class="shadow-layer"></div>
+    <div class="open-container">
+        <label for="close-input"><i class="fa-solid fa-bars fa-lg"></i></label>
+    </div>
+
+    <nav>
+        <div class="logo-close-container">
+            <div class="logo-container">
+                <a href="index.html" class="nav-btn nav-logo"></a>
+            </div>
+            <div class="close-container">
+                <label for="close-input"><i class="fa-solid fa-x"></i></label>
+            </div>
+        </div>
+        <div class="btn-container">
+            <a href="../index.html" class="nav-btn">Hjem</a>
+            <a href="../index.html#kontakt-oss-id" class="nav-btn nav-btn-kontakt-oss">Kontakt oss</a>
+            <a href="../om-oss.html" class="nav-btn nav-btn-home active">Om oss</a>
+            <a href="../prosjekt.html" class="nav-btn">Prosjekt</a>
+        </div>
+    </nav>
+
+    <h1 id="om-oss-header">Mikolaj</h1>
+
+    <div class="Boligen-Din-container">
+        <div class="kort-container">
+
+           
+            <div class="kort">
+                <div>
+                    <figure class="photo">
+                        <div class="produkt-bilde">
+                            <img src="../../images/profilbilde/pfpMikolaj.jpg" alt="Photo of Mikolaj">
+                        </div>
+                        <figcaption>faking it until making it</figcaption>
+                    </figure>
+                    <h3>Om meg</h3>
+                    <p>Profesjonell taper, sertifisert lat jævel </p>
+                    <p></p>
+                </div>
+                <a href="../index.html#kontakt-oss-id" class="btn" style="margin-top: 20px;">Kontakt meg (jeg kommer sannsynligvis ikke til å lese det)</a>
+            </div>
+
+            
+            <div class="kort">
+                <div>
+                   <p>Pengene mine forsvinner i et bunnhull av to ting: giftig energidrikk som holder maskineriet i gang, og altfor mye plast fra Warhammer (Greater Good på topp, absolutt ingen debatt).</p>
+    <p>Når virkeligheten blir for tung, flytter jeg inn i et skjermbilde. Jeg har brent av en kriminell mengde timer på Steam ta gjerne en titt på det totale fraværet av sosialt liv på <a href="https://steamcommunity.com/profiles/76561198860440449/">min Steam-profil</a>.</p>
+    <p>Seriemenyen er ganske stram: <em>The Sopranos</em>, <em>Breaking Bad</em>, <em>Chainsaw Man</em>, <em>Better Call Saul</em> og en liten dose <em>JoJo</em> når ting blir for normale.</p>
+    <p>Jeg har også en spesiell evne til å starte på ti tusen prosjekter samtidig, miste interessen etter fem minutter, og la dem støve bort for alltid. Kosmos krever tross alt balanse.</p>
+                </div>
+            </div>
+
+           
+            <div class="kort" style="grid-column: 1 / -1;">
+                <h3>hva jeg kan (*ærlig utgave)</h3>
+                <div style="overflow-x: auto;">
+                    <table class="tabell-data">
+                        <tr>
+                            <th>Ferdighet</th>
+                            <th>Nivå</th>
+                            <th>Unnskyldning</th>
+                        </tr>
+                        <tr>
+                            <td>Google tilfeldig dritt</td>
+                            <td>Ekspert</td>
+                            <td>Det kalles fOrSkNiNg, stol på meg.</td>
+                        </tr>
+                        <tr>
+                            <td>Finne dårlige unnskyldninger for å slippe å gjøre ting</td>
+                            <td>19 års erfaring</td>
+                            <td>ingen kommentar</td>
+                            <!--kommentar-->
+                        </tr>
+                        <tr>
+                            <td>Våkne før klokken 12</td>
+                            <td>underveis</td>
+                            <td>Senga har en sterk gravitasjonskraft. Trenger mer drivstoff.</td>
+                        </tr>
+                        <tr>
+                            <td>Fullføre prosjekter</td>
+                            <td>nei</td>
+                            <td>Tar det senere.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/3887c28c13.js" crossorigin="anonymous"></script>
+</main>
 </body>
 </html>
