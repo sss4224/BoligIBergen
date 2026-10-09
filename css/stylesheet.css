@@ -1060,11 +1060,11 @@ background-color: rgba(220, 220, 220, 0.5);
 }
 
 .team-grid > .card:nth-child(1) > a > .card-image {
-    background-image: url('../images/profilbilde/pfpHerman.jpg');
+    background-image: url('../images/profilbilde/pfpSebastian.jpg');
 }
 
 .team-grid > .card:nth-child(2) > a > .card-image {
-    background-image: url('../images/profilbilde/pfpSebastian.jpg');
+    background-image: url('../images/profilbilde/pfpHerman.jpg');
 }
 
 .team-grid > .card:nth-child(3) > a > .card-image {
