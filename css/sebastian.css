@@ -324,7 +324,7 @@ main{
     background-color: color-mix(in srgb, #151F2E, #79A9FF 5%);
 }
 
-@media (max-width: 1450px){
+@media (max-width: 1800px){
     .personlig-container{
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
