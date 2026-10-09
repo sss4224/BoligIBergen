@@ -189,3 +189,16 @@ display: flex;
 justify-content: space-between;
 
 }
+
+table,
+th,
+td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    width: 100px;
+    height: 40px;
+}
