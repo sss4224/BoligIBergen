@@ -1283,3 +1283,185 @@ tr > td:first-child{
     height: 90%;
     max-width: 90%;
 }
+ /*mikolajPersonlig*/ 
+ .mik-photo { 
+    position: relative; 
+    margin: 0 0 20px; 
+    transform: rotate(-2deg); 
+    transition: transform .3s; 
+}
+
+.mik-photo:hover { 
+    transform: rotate(2deg) scale(1.03); 
+}
+
+.mik-photo .mik-produkt-bilde { 
+    margin-bottom: 0; 
+    border: 2px solid black; 
+    box-shadow: 6px 6px 0 black; 
+}
+
+.mik-photo figcaption { 
+    position: absolute; 
+    right: -10px; 
+    bottom: 14px; 
+    background: #ffd23f; 
+    border: 2px solid black; 
+    border-radius: 8px; 
+    padding: 4px 12px; 
+    font-weight: 700; 
+    font-size: 15px; 
+    transform: rotate(5deg); 
+}
+
+.mik-tabell-data tr:hover td { 
+    background-color: #bff0bf; 
+}
+
+/* Balansert grid for bilde + tekst */
+.mik-kort-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+    .mik-kort-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mik-kort {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #f6f3f3;
+    border-radius: 12px;
+    padding: clamp(18px, 2vw, 20px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    border: 1px solid #9f9999;
+    min-height: 220px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.mik-kort:hover {
+    transform: translateY(-1px);
+    background: #ffffff5c;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.mik-produkt-bilde {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.mik-produkt-bilde img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* GDPR popup */
+#mik-gdpr-input { 
+    display: none; 
+}
+
+#mik-gdpr-input:checked ~ .mik-gdpr { 
+    display: none; 
+}
+
+.mik-gdpr { 
+    position: fixed; 
+    inset: 0; 
+    z-index: 1000; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 12px; 
+    box-sizing: border-box; 
+    background-color: rgba(0, 0, 0, .6); 
+}
+
+.mik-gdpr-boks { 
+    display: flex; 
+    flex-direction: column; 
+    width: min(820px, 100%); 
+    max-height: 80vh; 
+    background: white; 
+    border-radius: var(--mbr, 10px); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5); 
+    overflow: hidden; 
+}
+
+.mik-gdpr-boks header { 
+    padding: 10px 16px 6px; 
+    border-bottom: 1px solid #ddd; 
+}
+
+.mik-gdpr-boks h2 { 
+    margin: 0; 
+    font-size: 20px; 
+}
+
+.mik-gdpr-boks header p { 
+    margin: 2px 0 0; 
+    font-size: 12px; 
+    color: #666; 
+}
+
+.mik-gdpr-liste { 
+    flex: 1; 
+    overflow-y: auto; 
+    padding: 6px 16px; 
+    columns: 2 300px; 
+    column-gap: 24px; 
+}
+
+.mik-gdpr-liste label { 
+    display: flex; 
+    gap: 8px; 
+    align-items: flex-start; 
+    padding: 4px 0; 
+    break-inside: avoid; 
+    font-size: 13px; 
+    line-height: 1.3; 
+}
+
+.mik-gdpr-liste input { 
+    flex-shrink: 0; 
+    width: 15px; 
+    height: 15px; 
+    margin: 1px 0 0; 
+}
+
+.mik-gdpr-liste em { 
+    color: #ff4059; 
+    font-size: 10px; 
+    font-style: normal; 
+    font-weight: 700; 
+}
+
+.mik-gdpr-knapper { 
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    gap: 10px; 
+    padding: 8px 16px; 
+    border-top: 1px solid #ddd; 
+}
+
+.mik-gdpr-knapper label { 
+    cursor: pointer; 
+    font-size: 15px; 
+    padding: 10px 16px; 
+}
