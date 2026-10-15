@@ -53,11 +53,11 @@ main{
     text-decoration: none;
 }
 
-.nav-container > .nav-btn{
+.nav-container > .seb-nav-btn{
     display: flex;
     justify-content: flex-start;
 }
-.nav-container > .nav-btn > ul {
+.nav-container > .seb-nav-btn > ul {
     width: 12rem;
     padding: 0;
 
@@ -65,17 +65,17 @@ main{
     list-style-type: none;
     cursor: pointer;
 }
-.nav-container > .nav-btn > ul > li{
+.nav-container > .seb-nav-btn > ul > li{
     padding-left: 1rem;
 }
-.nav-container > .nav-btn > ul > li > a{
+.nav-container > .seb-nav-btn > ul > li > a{
     text-decoration: none;
     color: #E8EDF5;
     font-family: Arial, Helvetica, sans-serif;
 
     display: block;
 }
-.nav-container > .nav-btn > ul > li:hover{
+.nav-container > .seb-nav-btn > ul > li:hover{
     background-color: color-mix(in srgb, #151F2E, rgb(38, 98, 250) 7%);
 }
 
