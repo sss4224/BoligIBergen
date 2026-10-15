@@ -1933,7 +1933,6 @@ html {
 #alexBod .bildeavmeg img {
     height: 400px;
     width: auto;
-    border: 3px solid rgb(183, 0, 0);
     margin-left: 30px;
     margin-right: 30px;
     border-radius: 10px;
@@ -1942,7 +1941,6 @@ html {
 #alexBod .storrebilde img {
     height: 400px;
     width: auto;
-    border: 3px solid rgb(183, 0, 0);
     border-radius: 10px;
 }
 
@@ -2044,7 +2042,6 @@ html {
 #alexBod .bilderavfrankrike-top img {
     height: 300px;
     width: auto;
-    border: 3px solid rgb(183, 0, 0);
     margin: 30px;
     border-radius: 10px;
 }
@@ -2058,7 +2055,6 @@ html {
 #alexBod .bilderavfrankrike-bottom img {
     height: 300px;
     width: auto;
-    border: 3px solid rgb(183, 0, 0);
     margin: 30px;
     border-radius: 10px;
 }
