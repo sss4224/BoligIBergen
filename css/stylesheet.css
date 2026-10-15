@@ -1995,9 +1995,10 @@ html {
     padding: 20px 40px;
     background-color: black;
     border-bottom: 2px solid white;
+    position: static;
 }
 
-#alexBod .logoA {
+#alexBod .logo {
     color: rgb(183, 0, 0);
     font-family: "New Rocker", system-ui;
     font-size: 30px;
