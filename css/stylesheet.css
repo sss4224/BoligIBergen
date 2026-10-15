@@ -2324,7 +2324,8 @@ html {
         padding: 8px;
     }
 }
-/*hannah person*/
+
+/*hannah personal*/
 #hannahBod {
     background: #ead1e9;
     color: #251c29;
@@ -2346,7 +2347,7 @@ html {
 }
 
 /* Header */
-#hannahBod .site-header {
+#hannahBod .site-header-hr {
     position: sticky;
     top: 0;
     width: 100%;
@@ -2356,40 +2357,40 @@ html {
     backdrop-filter: blur(8px);
 }
 
-#hannahBod .header-inner {
-    width: min(1200px, 92%);
-    margin: auto;
-    min-height: 90px;
+#hannahBod .header-inner-hr {
+    width: 96%;
+    min-height: 72px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 }
 
 /* Logo */
-#hannahBod .logo {
+#hannahBod .logo-hr {
+    display: block;
+    flex: 0 1 auto;
+    min-width: 0;
     color: white;
     text-decoration: none;
     font-family: "Great Vibes", cursive;
-    font-size: clamp(42px, 6vw, 70px);
+    font-size: clamp(36px, 4vw, 58px);
     line-height: 1;
-    transition: transform 0.3s ease;
-}
-
-#hannahBod .logo span {
-    font-size: 20px;
-}
-
-#hannahBod .logo:hover {
-    transform: scale(1.03);
+    white-space: nowrap;
 }
 
 /* Navigation */
-#hannahBod .navigation {
+#hannahBod .navigation-hr {
     display: flex;
-    gap: 35px;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 28px;
+    margin-left: auto;
+    white-space: nowrap;
 }
 
-#hannahBod .navigation a {
+#hannahBod .navigation-hr a {
     color: white;
     text-decoration: none;
     font-family: "Cinzel", serif;
@@ -2398,7 +2399,7 @@ html {
     position: relative;
 }
 
-#hannahBod .navigation a::after {
+#hannahBod .navigation-hr a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -2409,7 +2410,7 @@ html {
     transition: width 0.3s ease;
 }
 
-#hannahBod .navigation a:hover::after {
+#hannahBod .navigation-hr a:hover::after {
     width: 100%;
 }
 
@@ -2898,22 +2899,22 @@ html {
 
 /* Mobile */
 @media (max-width: 800px) {
-    #hannahBod .header-inner {
+    #hannahBod .header-inner-hr {
         flex-direction: column;
         justify-content: center;
         gap: 12px;
         padding: 15px 0;
     }
 
-    #hannahBod .logo {
+    #hannahBod .logo-hr {
         font-size: 48px;
     }
 
-    #hannahBod .navigation {
+    #hannahBod .navigation-hr {
         gap: 18px;
     }
 
-    #hannahBod .navigation a {
+    #hannahBod .navigation-hr a {
         font-size: 11px;
     }
 
@@ -3217,4 +3218,29 @@ html {
     #hermanBod .book-card {
         width: 80px;
     }
+}
+
+/* Fixing bug Hannahs Header */
+#hannahBod .header-inner-hr {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+#hannahBod .logo-hr {
+    position: static !important;
+    flex: 0 0 auto !important;
+}
+
+#hannahBod .navigation-hr {
+    position: static !important;
+    display: flex !important;
+    flex-direction: row !important;
+    width: max-content !important;
+    flex: 0 0 auto !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 28px !important;
+    margin-left: auto !important;
 }
